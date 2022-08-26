@@ -1,0 +1,217 @@
+
+:root{
+    /* color */
+    --clr-jeremy:246, 80%, 60%;
+    --clr-bg:226, 43%, 10%;
+    --clr-down:235, 46%, 20%;
+    --clr-white:0 0 100%;
+    --clr-work:15, 100%, 70%;
+    --clr-play:195, 74%, 62%;
+    --clr-study:348, 100%, 68%;
+    --clr-exercise:145, 58%, 55%;
+    --clr-social:264, 64%, 52%;
+    --clr-self-care:43, 84%, 65%;
+    
+    /* font-weight*/
+    --fw-300:300;
+    --fw-400:400;
+    --fw-500:500;
+    
+    /* Font size*/
+    --fs-big:3rem;
+    --fs-mid:0.8rem;
+    --fs-small:0.7rem;
+    --fs-j:2rem;
+}
+
+.jeremy{background-color: hsl(var(--clr-jeremy));}
+.down{background-color: hsl(var(--clr-down));}
+.work{background-color: hsl(var(--clr-work));}
+.play{background-color: hsl(var(--clr-play));}
+.study{background-color: hsl(var(--clr-study));}
+.exercise{background-color: hsl(var(--clr-exercise));}
+.social{background-color: hsl(var(--clr-social));}
+.self-care{background-color: hsl(var(--clr-self-care));}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.fw-500{font-weight: 100;}
+.fw-400{font-weight: 100;}
+.fw-300{font-weight: 100;}
+
+.fs-big{font-size: var(--fs-big); }
+.fs-jeremy{font-size: var(--fs-j);}
+.fs-mid{font-size: var(--fs-mid);}
+.fs-small{font-size: var(--fs-small); opacity: 0.5;}
+
+
+
+/*----------------------------------------------------------------------*/
+
+*,img,picture,h1,h2,h3,h4,h5,h6,p,svg{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+body{
+    box-sizing: border-box;
+    background-color: hsl(var(--clr-bg));
+    line-height: 1.6;
+    min-height: 100vh;
+    color: white;
+    font-family:'Outfit',sans-serif;  
+}
+
+.container{
+    grid-template-columns: repeat(4,1fr);
+    max-width: 60rem;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.block1{
+    grid-row: 1/3;
+    width: 12rem;
+    border-radius: 1rem;
+}
+
+.svg{
+    z-index: 1;
+    float: right;
+    position: absolute;
+    margin-left: 6rem;
+}
+svg{
+    margin-right: 1rem;
+}
+
+.span{
+    min-width:12rem;
+    max-width: 12rem;
+    border-radius: 1rem;
+    min-height: 12rem;
+    max-height: 20rem;
+}
+
+.down{
+    min-height: rem;
+}
+
+.container div{
+    z-index: 2;
+    margin-top: auto;
+    border-radius: 1rem;
+    min-height: 10rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+a,p{
+    padding: 1rem;
+    line-height: 0.5;
+}
+
+img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 1.5rem;
+}
+
+
+
+.type{
+    margin-top: -1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.type p{
+    cursor: pointer;
+    width: fit-content;
+    opacity: 0.8;
+}
+
+.lower-box{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    justify-content: space-around; 
+}
+
+.upper-box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.jer{
+    padding: 0%;
+    margin: 0%;
+}
+.jer-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 6rem;
+}
+.jer-div p{
+    padding-left: 1rem;
+    margin: 0%;
+}
+
+.jer{
+    line-height: 1;
+}
+
+
+@media screen and (max-width:500px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .span{
+        min-height: 10rem;
+        max-height: 10rem;
+        min-width:20rem;
+        max-width: 20rem;
+    }
+    .container div{
+        min-height: 8rem;
+        max-height: 8rem;
+    }
+    .type{
+        flex-direction: row;
+    }
+    .lower-box{
+        flex-direction: row;
+        align-items: center;
+    }
+    .block1{
+        grid-row: 1/1;
+        max-width: 20rem;
+        min-width: 20rem;
+    }
+    .jeremy{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .svg{
+        margin-left: 12rem;
+    }
+}
